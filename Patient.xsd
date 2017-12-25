@@ -11,10 +11,10 @@
 			<element name="name" type="tns:String15Chars"/>
 			<element name="age" type="int"/>
 			<element name="dob" type="date"/>
-			<element name="email" type="string"/>
+			<element name="email" type="string" maxOccurs="unbounded"/>
 			<element name="gender" type="tns:Gender"/>
-			<element name="phone" type="string"/>
-			<element name="payment" type="tns:PaymentType"/>
+			<element name="phone" type="string" maxOccurs="10"/>
+			<element name="payment" type="tns:PaymentType" minOccurs="0"/>
 		</sequence>
 	</complexType>
 	
