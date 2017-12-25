@@ -7,7 +7,6 @@
 	<complexType name="Patient">
 		<!-- Los elementos de sequence deben aparecer en el orden exacto que propone el xsd -->
 		<sequence>
-			<element name="id" type="tns:ID"/>
 			<element name="name" type="tns:String15Chars"/>
 			<element name="age" type="int"/>
 			<element name="dob" type="date"/>
@@ -16,6 +15,7 @@
 			<element name="phone" type="string" maxOccurs="10"/>
 			<element name="payment" type="tns:PaymentType" minOccurs="0"/>
 		</sequence>
+		<attribute name="id" type="tns:ID" use="required"/>
 	</complexType>
 	
 	<complexType name="PaymentType">
