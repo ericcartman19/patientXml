@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:patient xmlns:tns="http://www.valoyes.com/Patient" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.valoyes.com/Patient Patient.xsd ">
+  <tns:id>123</tns:id>
+  <tns:name>Davide</tns:name>
+  <tns:age>2</tns:age>
+  <tns:dob>2022-02-21</tns:dob>
+  <tns:email>valoyes.b@gmail.com</tns:email>
+  <tns:gender>M</tns:gender>
+  <tns:phone>+34991234567</tns:phone>
+</tns:patient>
