@@ -5,6 +5,7 @@
 	<element name="patient" type="tns:Patient"/>
 	
 	<complexType name="Patient">
+		<!-- Los elementos de sequence deben aparecer en el orden exacto que propone el xsd -->
 		<sequence>
 			<element name="id" type="tns:ID"/>
 			<element name="name" type="tns:String15Chars"/>
@@ -13,7 +14,24 @@
 			<element name="email" type="string"/>
 			<element name="gender" type="tns:Gender"/>
 			<element name="phone" type="string"/>
+			<element name="payment" type="tns:PaymentType"/>
 		</sequence>
+	</complexType>
+	
+	<complexType name="PaymentType">
+		<!-- Hay que escoger uno de los elemetos que se ofrecen como posibilidad -->
+		<choice>
+			<element name="cash" type="int"/>
+			<element name="insurance" type="tns:Insurance"/>	
+		</choice>
+	</complexType>
+	
+	<complexType name="Insurance">
+		<!-- Hay que utilizar todos los elementos que se ofrecen pero el orden no importa -->
+		<all>
+			<element name="provider" type="string"/>
+			<element name="limit"/>
+		</all>
 	</complexType>
 	
 	<simpleType name="ID">
